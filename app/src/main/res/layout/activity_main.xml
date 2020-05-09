@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg0629_2"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/optionView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/margin_start_view"
+        android:layout_marginTop="@dimen/margin_top_view"
+        android:layout_marginBottom="@dimen/margin_bottom_top_view"
+        android:background="?attr/selectableItemBackground"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iconOption"
+            android:layout_width="@dimen/size_of_icon"
+            android:layout_height="@dimen/size_of_icon"
+            app:srcCompat="@drawable/if000_staggered_selected" />
+
+        <TextView
+            android:id="@+id/textOption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin_start_text_option"
+            android:text="@string/option1"
+            android:textColor="@color/textSelected"
+            android:textSize="@dimen/text_size_14" />
+
+        <ImageView
+            android:id="@+id/iconExpand"
+            android:layout_width="@dimen/size_of_expand"
+            android:layout_height="@dimen/size_of_expand"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin_start_expand"
+            app:srcCompat="@drawable/if000_header_arrow_s_down" />
+
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tabs"
+        android:layout_below="@id/optionView"
+        tools:ignore="MissingConstraints,UnknownId" />
+
+    <include
+        android:id="@+id/popupOption"
+        layout="@layout/custom_popup"
+        android:layout_width="@dimen/width_of_popup_item"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/optionView"
+        android:layout_marginStart="@dimen/margin_start_view"
+        android:visibility="gone"
+        tools:ignore="PrivateResource" />
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_of_tab_layout"
+        android:layout_alignParentBottom="true"
+        app:tabBackground="@color/colorBackgroundTabLayout"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabTextColor="@color/selectedTab"
+        tools:ignore="MissingConstraints" />
+
+</RelativeLayout>

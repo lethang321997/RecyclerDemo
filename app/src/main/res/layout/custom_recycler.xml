@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    app:cardCornerRadius="@dimen/radius_card_view"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/padding_bottom_card_view">
+
+        <ImageView
+            android:id="@+id/imageList"
+            android:layout_width="@dimen/size_of_image"
+            android:layout_height="@dimen/size_of_image"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/textList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_horizontal_text_card_view"
+            android:layout_marginTop="@dimen/margin_top_text_card_view"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_14" />
+        <ImageView
+            android:id="@+id/iconWebView"
+            android:layout_width="@dimen/size_of_icon_web_view"
+            android:layout_height="@dimen/size_of_icon_web_view"
+            android:layout_marginStart="@dimen/margin_start_icon_web_view"
+            android:layout_marginTop="@dimen/margin_top_icon_web_view"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_relative_view">
+
+            <TextView
+                android:id="@+id/textDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:textSize="@dimen/text_size_12"
+                android:textColor="@color/gray"
+                android:layout_marginStart="@dimen/margin_start_text_date"
+                android:layout_marginTop="@dimen/margin_top_text_date" />
+
+            <ImageView
+                android:id="@+id/iconList"
+                android:layout_width="@dimen/size_of_star"
+                android:layout_height="@dimen/size_of_star"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="@dimen/margin_end_star_icon" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

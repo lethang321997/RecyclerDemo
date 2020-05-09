@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/group_option"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        app:srcCompat="@drawable/if000_popup_bg" />
+
+    <LinearLayout
+        android:id="@+id/option1"
+        style="@style/popup_item_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/popup_first_item"
+        android:paddingTop="@dimen/padding_top_popup">
+
+        <ImageView
+            android:id="@+id/iconOption1"
+            android:layout_width="@dimen/size_of_icon"
+            android:layout_height="@dimen/size_of_icon"
+            app:srcCompat="@drawable/popup_item_1" />
+
+        <TextView
+            android:id="@+id/textOption1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin_start_text_item"
+            android:text="@string/option1"
+            android:textColor="@drawable/popup_text"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/option2"
+        style="@style/popup_item_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iconOption2"
+            android:layout_width="@dimen/size_of_icon"
+            android:layout_height="@dimen/size_of_icon"
+            app:srcCompat="@drawable/popup_item_2" />
+
+        <TextView
+            android:id="@+id/textOption2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin_start_text_item"
+            android:text="@string/option2"
+            android:textColor="@drawable/popup_text"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/option3"
+        style="@style/popup_item_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iconOption3"
+            android:layout_width="@dimen/size_of_icon"
+            android:layout_height="@dimen/size_of_icon"
+            app:srcCompat="@drawable/popup_item_3" />
+
+        <TextView
+            android:id="@+id/textOption3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin_start_text_item"
+            android:text="@string/option3"
+            android:textColor="@drawable/popup_text"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/option4"
+        style="@style/popup_item_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iconOption4"
+            android:layout_width="@dimen/size_of_icon"
+            android:layout_height="@dimen/size_of_icon"
+            app:srcCompat="@drawable/popup_item_4" />
+
+        <TextView
+            android:id="@+id/textOption4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin_start_text_item"
+            android:text="@string/option4"
+            android:textColor="@drawable/popup_text"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/option5"
+        style="@style/popup_item_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iconOption5"
+            android:layout_width="@dimen/size_of_icon"
+            android:layout_height="@dimen/size_of_icon"
+            app:srcCompat="@drawable/popup_item_5" />
+
+        <TextView
+            android:id="@+id/textOption5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin_start_text_item"
+            android:text="@string/option5"
+            android:textColor="@drawable/popup_text"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/popup_last_item"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_of_line"
+            android:layout_marginStart="@dimen/margin_start_view"
+            android:layout_marginEnd="@dimen/margin_start_view"
+            android:background="@color/textUnselected" />
+
+        <LinearLayout
+            android:id="@+id/option6"
+            style="@style/popup_item_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/popup_last_item"
+            android:paddingBottom="@dimen/padding_bottom_popup">
+
+            <ImageView
+                android:id="@+id/iconOption6"
+                android:layout_width="@dimen/size_of_icon"
+                android:layout_height="@dimen/size_of_icon"
+                app:srcCompat="@drawable/popup_item_6" />
+
+            <TextView
+                android:id="@+id/textOption6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_start_text_item"
+                android:text="@string/option6"
+                android:textColor="@drawable/popup_text"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

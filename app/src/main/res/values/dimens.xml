@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dialog_radius">20dp</dimen>
+    <dimen name="padding_dialog">10dp</dimen>
+    <dimen name="radius_popup">10dp</dimen>
+    <dimen name="margin_top_view">7dp</dimen>
+    <dimen name="margin_bottom_top_view">4dp</dimen>
+    <dimen name="margin_start_view">15dp</dimen>
+    <dimen name="size_of_icon">24dp</dimen>
+    <dimen name="padding_vertical_option">8dp</dimen>
+    <dimen name="margin_start_text_option">5dp</dimen>
+    <dimen name="size_of_star">24dp</dimen>
+    <dimen name="size_of_image">181dp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="size_of_expand">12dp</dimen>
+    <dimen name="margin_start_expand">30dp</dimen>
+    <dimen name="width_of_popup_item">175dp</dimen>
+    <dimen name="height_of_tab_layout">60dp</dimen>
+    <dimen name="padding_top_popup">12dp</dimen>
+    <dimen name="margin_start_text_item">5dp</dimen>
+    <dimen name="padding_bottom_popup">12dp</dimen>
+    <dimen name="radius_card_view">20dp</dimen>
+    <dimen name="margin_horizontal_text_card_view">10dp</dimen>
+    <dimen name="padding_bottom_card_view">15dp</dimen>
+    <dimen name="margin_top_text_card_view">10dp</dimen>
+    <dimen name="margin_top_text_date">4dp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="margin_end_star_icon">10dp</dimen>
+    <dimen name="margin_start_line">105dp</dimen>
+    <dimen name="padding_horizontal_card_view2">20dp</dimen>
+    <dimen name="padding_vertical_card_view2">12dp</dimen>
+    <dimen name="size_of_image_card_view2">70dp</dimen>
+    <dimen name="height_of_line" format="float">0.7dp</dimen>
+    <dimen name="margin_start_text_card_view2">15dp</dimen>
+    <dimen name="size_of_image_dialog">300dp</dimen>
+    <dimen name="margin_start_text_date">10dp</dimen>
+    <dimen name="margin_top_relative_view">20dp</dimen>
+    <dimen name="size_of_icon_web_view">18dp</dimen>
+    <dimen name="margin_start_icon_web_view">20dp</dimen>
+    <dimen name="margin_top_icon_web_view">5dp</dimen>
+</resources>

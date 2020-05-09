@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/padding_horizontal_card_view2"
+        android:paddingVertical="@dimen/padding_vertical_card_view2">
+
+        <ImageView
+            android:id="@+id/imageList"
+            android:layout_width="@dimen/size_of_image_card_view2"
+            android:layout_height="@dimen/size_of_image_card_view2"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/textList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_text_card_view2"
+            android:layout_toEndOf="@id/imageList"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_14" />
+
+        <ImageView
+            android:id="@+id/iconWebView"
+            android:layout_width="@dimen/size_of_icon_web_view"
+            android:layout_height="@dimen/size_of_icon_web_view"
+            android:layout_below="@id/textList"
+            android:layout_marginStart="@dimen/margin_start_icon_web_view"
+            android:layout_marginTop="@dimen/margin_top_icon_web_view"
+            android:layout_toEndOf="@id/imageList"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/margin_start_text_card_view2"
+            android:layout_toEndOf="@id/imageList"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_12" />
+
+        <ImageView
+            android:id="@+id/iconList"
+            android:layout_width="@dimen/size_of_star"
+            android:layout_height="@dimen/size_of_star"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_of_line"
+        android:layout_gravity="bottom|end"
+        android:layout_marginStart="@dimen/margin_start_line"
+        android:background="@color/textUnselected" />
+</androidx.cardview.widget.CardView>

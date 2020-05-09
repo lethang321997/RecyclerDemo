@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/if000_popup_item_unread_selected" android:state_selected="true"/>
+    <item android:drawable="@drawable/if000_popup_item_unread_unselected" android:state_selected="false"/>
+</selector>

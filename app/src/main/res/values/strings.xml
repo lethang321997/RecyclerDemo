@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">RecyclerDemo</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_ok">OK</string>
+    <string name="text_cancel">Cancel</string>
+    <string name="option1">カテゴリ表示</string>
+    <string name="option2">重要</string>
+    <string name="option3">おすすめ</string>
+    <string name="option4">お気に入り</string>
+    <string name="option5">未読</string>
+    <string name="option6">一覧で見る</string>
+    <string name="tab1">ホーム</string>
+    <string name="tab2">照会・設定</string>
+    <string name="tab3">お知らせ</string>
+    <string name="tab4">会員証</string>
+</resources>
