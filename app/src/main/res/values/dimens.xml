@@ -38,4 +38,6 @@
     <dimen name="size_of_icon_web_view">18dp</dimen>
     <dimen name="margin_start_icon_web_view">20dp</dimen>
     <dimen name="margin_top_icon_web_view">5dp</dimen>
+    <dimen name="width_dialog_info">350dp</dimen>
+    <dimen name="width_dialog_web_view">370dp</dimen>
 </resources>

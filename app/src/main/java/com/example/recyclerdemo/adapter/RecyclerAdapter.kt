@@ -1,6 +1,7 @@
 package com.example.recyclerdemo.adapter
 
 import android.app.AlertDialog
+import android.app.Dialog
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -89,14 +90,10 @@ class RecyclerAdapter(
     }
 
     private fun displayDialogInfo(item: ItemList) {
-        val dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_info, null)
-        val builder = AlertDialog.Builder(context).setView(dialogView)
-        val dialog = builder.show()
+        val dialog = Dialog(context)
+        dialog.setContentView(R.layout.dialog_info)
+        dialog.show()
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        val lp = WindowManager.LayoutParams()
-        lp.copyFrom(dialog.window?.attributes)
-        lp.width = widthDialog
-        dialog.window?.attributes = lp
         Glide.with(dialog.context)
             .load(item.url)
             .into(dialog.imageDialog)
@@ -112,9 +109,9 @@ class RecyclerAdapter(
     }
 
     private fun displayDialogWebView(item: ItemList) {
-        val dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_web_view, null)
-        val builder = AlertDialog.Builder(context).setView(dialogView)
-        val dialog = builder.show()
+        val dialog = Dialog(context)
+        dialog.setContentView(R.layout.dialog_web_view)
+        dialog.show()
         dialog.webView.loadUrl(item.http)
         dialog.webView.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
