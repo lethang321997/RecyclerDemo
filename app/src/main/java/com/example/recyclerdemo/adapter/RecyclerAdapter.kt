@@ -27,7 +27,6 @@ class RecyclerAdapter(
     private var typeView: Int
 ) :
     RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
-    private val widthDialog = 900
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bindData(item: ItemList) {

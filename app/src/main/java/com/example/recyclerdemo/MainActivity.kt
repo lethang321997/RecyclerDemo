@@ -3,24 +3,43 @@ package com.example.recyclerdemo
 
 import android.graphics.PorterDuff
 import android.os.Bundle
+import android.os.PersistableBundle
+import android.util.Log
 import android.view.View
+import android.widget.AdapterView
+import android.widget.ListView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.example.recyclerdemo.adapter.DropDownListAdapter
 import com.example.recyclerdemo.adapter.TabLayoutAdapter
+import com.example.recyclerdemo.model.DropDownList
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.view.*
+import kotlinx.android.synthetic.main.custom_dropdown.*
 import kotlinx.android.synthetic.main.custom_popup.*
 
 
 class MainActivity : AppCompatActivity() {
 
+    companion object {
+        const val TEXT_OPTION_1 = "カテゴリ表示"
+        const val TEXT_OPTION_2 = "重要"
+        const val TEXT_OPTION_3 = "おすすめ"
+        const val TEXT_OPTION_4 = "お気に入り"
+        const val TEXT_OPTION_5 = "未読"
+        const val TEXT_OPTION_6 = "一覧で見る"
+    }
+
     private lateinit var fm1: MyFragment
-    private var isOpen: Boolean = false
     private var optionSelected = 1
+    private var dropDownArray: ArrayList<DropDownList> = ArrayList()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         initView()
+        initDropDownList()
         initAction()
     }
 
@@ -32,63 +51,17 @@ class MainActivity : AppCompatActivity() {
 
     private fun initAction() {
         optionView.setOnClickListener {
-            option1.isSelected = false
-            option2.isSelected = false
-            option3.isSelected = false
-            option4.isSelected = false
-            option5.isSelected = false
-            option6.isSelected = false
-            when (optionSelected) {
-                1 -> {
-                    option1.isSelected = true
-                }
-                2 -> {
-                    option2.isSelected = true
-                }
-                3 -> {
-                    option3.isSelected = true
-                }
-                4 -> {
-                    option4.isSelected = true
-                }
-                5 -> {
-                    option5.isSelected = true
-                }
-                6 -> {
-                    option6.isSelected = true
-                }
+            if (dropdown_list.visibility == View.INVISIBLE) {
+                dropdown_list.visibility = View.VISIBLE
+                imageViewList.visibility = View.VISIBLE
+            } else {
+                dropdown_list.visibility = View.INVISIBLE
+                imageViewList.visibility = View.INVISIBLE
             }
-            popupOption.visibility = if (isOpen) View.GONE else View.VISIBLE
-            isOpen = !isOpen
         }
-        option1.setOnClickListener {
-            setOptionChange(1,R.drawable.if000_staggered_selected,resources.getString(R.string.option1))
-        }
-        option2.setOnClickListener {
-            setOptionChange(2,R.drawable.if000_popup_item_important_selected,resources.getString(R.string.option2))
-        }
-        option3.setOnClickListener {
-            setOptionChange(3,R.drawable.if000_popup_item_recommend_selected,resources.getString(R.string.option3))
-        }
-        option4.setOnClickListener {
-            setOptionChange(4,R.drawable.if000_popup_item_fav_selected,resources.getString(R.string.option4))
-        }
-        option5.setOnClickListener {
-            setOptionChange(5,R.drawable.if000_popup_item_unread_selected,resources.getString(R.string.option5))
-        }
-        option6.setOnClickListener {
-            setOptionChange(6,R.drawable.if000_popup_item_list_selected,resources.getString(R.string.option6))
-        }
+
     }
 
-    private fun setOptionChange(type : Int, image : Int, text : String){
-        fm1.initAdapter(type)
-        iconOption.setImageResource(image)
-        textOption.text = text
-        popupOption.visibility = View.GONE
-        optionSelected = type
-        isOpen = false
-    }
 
     private fun setViewTabLayout() {
         val adapter = TabLayoutAdapter(supportFragmentManager)
@@ -124,6 +97,78 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
+    private fun initDropDownList() {
+        dropDownArray.add(DropDownList(R.drawable.popup_item_1, TEXT_OPTION_1))
+        dropDownArray.add(DropDownList(R.drawable.popup_item_2, TEXT_OPTION_2))
+        dropDownArray.add(DropDownList(R.drawable.popup_item_3, TEXT_OPTION_3))
+        dropDownArray.add(DropDownList(R.drawable.popup_item_4, TEXT_OPTION_4))
+        dropDownArray.add(DropDownList(R.drawable.popup_item_5, TEXT_OPTION_5))
+        dropDownArray.add(DropDownList(R.drawable.popup_item_6, TEXT_OPTION_6))
+        val dropDownAdapter = DropDownListAdapter(applicationContext, dropDownArray)
+        dropdown_list.adapter = dropDownAdapter
+        dropdown_list.choiceMode = ListView.CHOICE_MODE_SINGLE
+        dropdown_list.setItemChecked(0,true)
+        dropdown_list.onItemClickListener =
+            AdapterView.OnItemClickListener { parent, view, position, id ->
+                dropdown_list.visibility = View.INVISIBLE
+                imageViewList.visibility = View.INVISIBLE
+                when (position) {
+                    0 -> {
+                        setOptionChange(
+                            1,
+                            R.drawable.if000_staggered_selected,
+                            resources.getString(R.string.option1)
+                        )
+                    }
+                    1 -> {
+                        setOptionChange(
+                            2,
+                            R.drawable.if000_popup_item_important_selected,
+                            resources.getString(R.string.option2)
+                        )
+                    }
+                    2 -> {
+                        setOptionChange(
+                            3,
+                            R.drawable.if000_popup_item_recommend_selected,
+                            resources.getString(R.string.option3)
+                        )
+                    }
+                    3 -> {
+                        setOptionChange(
+                            4,
+                            R.drawable.if000_popup_item_fav_selected,
+                            resources.getString(R.string.option4)
+                        )
+                    }
+                    4 -> {
+                        setOptionChange(
+                            5,
+                            R.drawable.if000_popup_item_unread_selected,
+                            resources.getString(R.string.option5)
+                        )
+                    }
+                    5 -> {
+                        setOptionChange(
+                            6,
+                            R.drawable.if000_popup_item_list_selected,
+                            resources.getString(R.string.option6)
+                        )
+                    }
+                }
+            }
+    }
+
+    private fun setOptionChange(type: Int, image: Int, text: String) {
+        fm1.initAdapter(type)
+        iconOption.setImageResource(image)
+        textOption.text = text
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt("my",dropdown_list.selectedItemPosition)
+    }
 }
 
 

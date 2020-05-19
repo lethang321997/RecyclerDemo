@@ -9,7 +9,6 @@
     </style>
     <style name="popup_item_menu">
         <item name="android:gravity">center_vertical</item>
-        <item name="android:background">@color/white</item>
         <item name="android:orientation">horizontal</item>
         <item name="android:paddingTop">@dimen/padding_vertical_option</item>
         <item name="android:paddingEnd">@dimen/margin_start_view</item>
